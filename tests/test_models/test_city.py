@@ -11,7 +11,7 @@ from models.review import Review
 
 
 class Testcity(unittest.TestCase):
-    """ """
+    """Test city class """
 
     def test_pep8_conformance_city(self):
         """Test that we conform to PEP8."""
@@ -21,9 +21,11 @@ class Testcity(unittest.TestCase):
 code style errors (and warnings).")
 
     def test_class(self):
+        """ test class """
         city1 = City()
         self.assertEqual(city1.__class__.__name__, "City")
 
     def test_father(self):
+        """ test father """
         city1 = City()
         self.assertTrue(issubclass(city1.__class__, BaseModel))

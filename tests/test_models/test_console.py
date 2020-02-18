@@ -10,6 +10,7 @@ from models.review import Review
 
 
 class Testmodels(unittest.TestCase):
+    """ Test models class """
     def test_class(self):
         city1 = City()
         amenity1 = Amenity()
@@ -23,6 +24,7 @@ class Testmodels(unittest.TestCase):
         self.assertEqual(place1.__class__.__name__, "Place")
 
     def test_father(self):
+        """ test father """
         city1 = City()
         amenity1 = Amenity()
         state1 = State()

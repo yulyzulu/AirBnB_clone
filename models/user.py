@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module to execute the program """
 
 from models.base_model import BaseModel
 
