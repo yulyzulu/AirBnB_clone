@@ -3,9 +3,16 @@
 
 
 import unittest
+from datetime import datetime
+import uuid
 import os
 from models.base_model import BaseModel
 import pep8
+from models.city import City
+from models.place import Place
+from models.amenity import Amenity
+from models.state import State
+from models.review import Review
 
 
 class TestBaseModel(unittest.TestCase):
