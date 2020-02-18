@@ -21,7 +21,7 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def teardown(cls):
         """at the end of the test this will tear it down"""
-        del cls.base​
+        del cls.base
 
     def tearDown(self):
         """teardown"""
@@ -57,7 +57,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save_BaesModel(self):
         """test if the save method works"""
         self.base.save()
-        self.assertEqual(self.base.created_at, self.base.updated_at)
+        self.assertNotEqual(self.base.created_at, self.base.updated_at)
 
     def test_to_dict_BaseModel(self):
         """test if to_dictionary method works"""
@@ -65,6 +65,6 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(self.base.__class__.__name__, 'BaseModel')
         self.assertIsInstance(base_dict['created_at'], str)
         self.assertIsInstance(base_dict['updated_at'], str)
-​
+
 if __name__ == "__main__":
     unittest.main()
