@@ -208,7 +208,6 @@ class HBNBCommand(cmd.Cmd):
             concatenation = argument[0] + " " + t[1].strip(')')
             self.do_destroy(concatenation)
             return False
-        
         else:
             print("*** Unknown syntax: {}".format(args))
 
