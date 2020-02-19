@@ -184,6 +184,13 @@ class HBNBCommand(cmd.Cmd):
                 setattr(all_objects, arguments[2], "{}".format(arguments[3]))
                 all_objects.save()
 
+    def default(self, args):
+        arguments = args.split(".")
+        if arguments[0] in self.name_classes and arguments[1] == "all()":
+            self.do_all(arguments[0])
+        else:
+            print("*** Unknown syntax: {}".format(args))
+
 if __name__ == '__main__':
     console = HBNBCommand()
     console.cmdloop()
