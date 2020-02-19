@@ -200,14 +200,15 @@ class HBNBCommand(cmd.Cmd):
                     count = count + 1
             print(count)
             return False
-        elif argument[0] in self.name_classes and t[0].strip('(') == "show":
+        elif argument[0] in self.name_classes and t[0] == "show":
             concatenation = argument[0] + " " + t[1].strip(')')
             self.do_show(concatenation)
             return False
-        elif argument[0] in self.name_classes and t[0].strip('(') == "destroy":
+        elif argument[0] in self.name_classes and t[0] == "destroy":
             concatenation = argument[0] + " " + t[1].strip(')')
             self.do_destroy(concatenation)
             return False
+        
         else:
             print("*** Unknown syntax: {}".format(args))
 
