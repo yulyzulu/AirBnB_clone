@@ -186,23 +186,27 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, args):
         """ default """
-        arguments = args.split(".")
-        tok = arguments[1].split("(")
-        if arguments[0] in self.name_classes and arguments[1] == "all()":
-            self.do_all(arguments[0])
+        argument = args.split(".")
+        t = argument[1].split("(")
+        if argument[0] in self.name_classes and argument[1] == "all()":
+            self.do_all(argument[0])
             return False
-        elif arguments[0] in self.name_classes and arguments[1] == "count()":
+        elif argument[0] in self.name_classes and argument[1] == "count()":
             all_objects = storage.all()
             count = 0
             for key in all_objects.keys():
                 token = key.split(".")
-                if token[0] == arguments[0]:
+                if token[0] == argument[0]:
                     count = count + 1
             print(count)
             return False
-        elif arguments[0] in self.name_classes and tok[0].strip('(') == "show":
-            concatenation = arguments[0] + " " + tok[1].strip(')')
+        elif argument[0] in self.name_classes and t[0].strip('(') == "show":
+            concatenation = argument[0] + " " + t[1].strip(')')
             self.do_show(concatenation)
+            return False
+        elif argument[0] in self.name_classes and t[0].strip('(') == "destroy":
+            concatenation = argument[0] + " " + t[1].strip(')')
+            self.do_destroy(concatenation)
             return False
         else:
             print("*** Unknown syntax: {}".format(args))
