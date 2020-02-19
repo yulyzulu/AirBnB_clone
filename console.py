@@ -173,20 +173,10 @@ class HBNBCommand(cmd.Cmd):
         elif len(arguments) == 3:
             print("** value missing **")
             return (False)
-        elif len(arguments) >= 4:
-            keys = arguments[0] + "." + arguments[1]
-            all_objects = storage.all()
-            obj = all_objects[keys]
-            if arguments[0] == "Place":
-                if arguments[2] in self.ints:
-                    setattr(obj, arguments[2], int(arguments[3]))
-                elif arguments[2] in self.floats:
-                    setattr(obj, arguments[2], float(arguments[3]))
-                else:
-                    setattr(obj, arguments[2], arguments[3])
-            else:
-                setattr(obj, arguments[2], arguments[3])
-            storage.save()
+        else:
+            all_objects = storage.all().get(arguments[0] + "." + arguments[1])
+            setattr(all_objects, arguments[2], "{}".format(arguments[3]))
+            all_objects.save()
 
 if __name__ == '__main__':
     console = HBNBCommand()
