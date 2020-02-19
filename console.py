@@ -174,9 +174,15 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
             return (False)
         else:
-            all_objects = storage.all().get(arguments[0] + "." + arguments[1])
-            setattr(all_objects, arguments[2], "{}".format(arguments[3]))
-            all_objects.save()
+            keys = arguments[0] + "." + arguments[1]
+            all_objects = storage.all()
+            if keys not in all_objects.keys():
+                print("** no instance found **")
+                return (False)
+            else:
+                all_objects = storage.all().get(keys)
+                setattr(all_objects, arguments[2], "{}".format(arguments[3]))
+                all_objects.save()
 
 if __name__ == '__main__':
     console = HBNBCommand()
