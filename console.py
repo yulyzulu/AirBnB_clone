@@ -185,9 +185,12 @@ class HBNBCommand(cmd.Cmd):
                 all_objects.save()
 
     def default(self, args):
+        """ default """
         arguments = args.split(".")
+        tok = arguments[1].split("(")
         if arguments[0] in self.name_classes and arguments[1] == "all()":
             self.do_all(arguments[0])
+            return False
         elif arguments[0] in self.name_classes and arguments[1] == "count()":
             all_objects = storage.all()
             count = 0
@@ -196,6 +199,11 @@ class HBNBCommand(cmd.Cmd):
                 if token[0] == arguments[0]:
                     count = count + 1
             print(count)
+            return False
+        elif arguments[0] in self.name_classes and tok[0].strip('(') == "show":
+            concatenation = arguments[0] + " " + tok[1].strip(')')
+            self.do_show(concatenation)
+            return False
         else:
             print("*** Unknown syntax: {}".format(args))
 
