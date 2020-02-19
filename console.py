@@ -187,7 +187,7 @@ class HBNBCommand(cmd.Cmd):
     def default(self, args):
         """ default """
         argument = args.split(".")
-        t = argument[1].split("(")
+        tok = argument[1].split("(")
         if argument[0] in self.name_classes and argument[1] == "all()":
             self.do_all(argument[0])
             return False
@@ -200,13 +200,19 @@ class HBNBCommand(cmd.Cmd):
                     count = count + 1
             print(count)
             return False
-        elif argument[0] in self.name_classes and t[0] == "show":
-            concatenation = argument[0] + " " + t[1].strip(')')
+        elif argument[0] in self.name_classes and tok[0] == "show":
+            concatenation = argument[0] + " " + tok[1].strip(')')
             self.do_show(concatenation)
             return False
-        elif argument[0] in self.name_classes and t[0] == "destroy":
-            concatenation = argument[0] + " " + t[1].strip(')')
+        elif argument[0] in self.name_classes and tok[0] == "destroy":
+            concatenation = argument[0] + " " + tok[1].strip(')')
             self.do_destroy(concatenation)
+            return False
+        elif argument[0] in self.name_classes and tok[0] == "update":
+            data = tok[1].strip(")")
+            data = data.split(", ")
+            con = argument[0] + " " + data[0] + " " + data[1] + " " + data[2]
+            self.do_update(con)
             return False
         else:
             print("*** Unknown syntax: {}".format(args))
