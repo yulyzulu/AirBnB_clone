@@ -1,6 +1,6 @@
 # Airbnb clone- The console description
 
-[![N|Solid]](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUZGDONYM4%2F20200220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200220T005812Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7a0eec47ffac6d5304074263fa5f98c4e326240aca76ad29ea081d1d18b7b6a9)
+
 
 The project is a command interpreter to manipulate data without a visual interface. The console has prompt (hbnb) and its shown every time a command is executed. In this console you can use different commands as: all, create, destroy, help, quit, show, update and EOF.
 
