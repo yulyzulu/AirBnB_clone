@@ -103,9 +103,9 @@ vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone$ ./console.py
 ```
 
 ## Developed with
--- Python3: Language builded
--- Ubuntu 14.04 LTS: Operative System
--- PEP8: Style guide for Python code in ver 1.7
+- Python3: Language builded
+- Ubuntu 14.04 LTS: Operative System
+- PEP8: Style guide for Python code in ver 1.7
 
 ## Authors
 Oscar Riaño Tapias- Github: OscarDRT
