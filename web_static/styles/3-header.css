@@ -9,7 +9,7 @@ header {
     align-items: center;
 }
 
-.logo {
+div.logo {
     background-image: url(/web_static/images/logo.png);
     width:142px;
     height:60px;
