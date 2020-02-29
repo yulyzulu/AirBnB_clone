@@ -54,17 +54,28 @@ h4 {
 .popover{
     position: relative;
     width: 100%;
-    left: -10%;
+    left: -12%;
     background-color: #FAFAFA;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 9%;
+    padding-bottom: 11%;
+    padding-left: 11.7%;
     list-style: none;
-    display: inline-block;
+    display: none;
+    margin-top: 19px;
 }
 
 h2 {
     font-size: 16px;
+    margin-left: -8px;
+    margin-bottom: 1px;
+}
+
+.locations:hover .popover, .amenities:hover .popover {
+    display: block;
+}
+
+ul {
+    line-height: 18pt;
 }
