@@ -1,3 +1,6 @@
+.places {
+    margin-bottom: 60px;
+}
 .places .arti {
     display: flex;
     flex-wrap: wrap;
