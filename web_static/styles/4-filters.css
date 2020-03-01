@@ -19,7 +19,6 @@ section.filters {
     border: 0px;
     border-radius: 4px;
     right: 30px;
-    cursor: pointer;
 }
 .buttonsearch:hover {
     opacity: .9;
