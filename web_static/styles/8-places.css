@@ -35,11 +35,12 @@ article h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
-    margin-left: 85%;
+    margin-top: -48px;
+    margin-left: 83.8%;
+    margin-bottom: 5px;
 
 }
-   
+
 .information {
     display: flex;
     justify-content: center;
@@ -47,8 +48,6 @@ article h2 {
     height: 80px;
     border-top: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
-    
-
 }
 
 .information p {
@@ -60,6 +59,7 @@ article h2 {
     width: 50px;
     height: 50px;
     margin-top: 20px;
+    text-align: center;
 
 }
 
@@ -68,6 +68,7 @@ article h2 {
     width: 50px;
     height: 50px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .information .bath {
@@ -75,6 +76,7 @@ article h2 {
     width: 50px;
     height: 50px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .information .number_bathrooms {
@@ -82,13 +84,18 @@ article h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
 }
 
 .user {
+    margin-top: 20px;
+    margin-bottom: 3px;
 
 }
 
 .description {
-
+    margin: -2px;
+    padding: 0px;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
