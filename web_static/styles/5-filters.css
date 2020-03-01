@@ -29,7 +29,7 @@ div.locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
-    margin-left: 30px;
+    margin-left: 40px;
     text-align: justify;
     vertical-align: middle;
 }
@@ -37,7 +37,7 @@ div.locations {
 div.amenities {
     height: 100%;
     width: 25%;
-    margin-left: 30px;
+    margin-left: 40px;
     vertical-align: middle;
 }
 
