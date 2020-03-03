@@ -55,7 +55,7 @@ article h2 {
     margin-top: -5px;
 }
 .information .group {
-    background-image: url(/web_static/images/icon_group.png);
+    background-image: url(../images/icon_group.png);
     width: 50px;
     height: 50px;
     margin-top: 20px;
@@ -64,7 +64,7 @@ article h2 {
 }
 
 .information .bed {
-    background-image: url(/web_static/images/icon_bed.png);
+    background-image: url(../images/icon_bed.png);
     width: 50px;
     height: 50px;
     margin-top: 20px;
@@ -72,7 +72,7 @@ article h2 {
 }
 
 .information .bath {
-    background-image: url(/web_static/images/icon_bath.png);
+    background-image: url(../images/icon_bath.png);
     width: 50px;
     height: 50px;
     margin-top: 20px;
